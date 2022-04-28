@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- added icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Materialize icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- added favicon in tab -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/map-style.css">
+    <title>Bar-Hop</title>
+</head>
+
+<body>
+    <header id="header" class="">
+        <!-- here goes the app name and nav bar -->
+        <!-- <div class="navbar-fixed"> -->
+        <nav id="navigation" class="hero-image">
+            <div class="">
+                <!-- Big bground with picture of the cocktail. -->
+                <a href="#" class="brand-logo center">
+                    <h1>Bar-Hop</h1>
+                </a>
+                <!-- <a class="right btn-floating btn-large lime darken-4"><i class="fa-solid fa-magnifying-glass"></i></a> -->
+                <!-- We can have search here like an icon click on it and the search bar show up.  -->
+                <ul id="nav-mobile" class="">
+                    <li><a href="#map"><i class="large material-icons" title="Map">map</i></a></li>
+                    <li><a href="#cocktail-name-input">
+                            <i class="large material-icons" title="Search">search</i>
+                        </a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- </div> -->
+    </header>
+    <main class="">
+        <!-- </div> -->
+        <form id="search-bar" class="row my-3 col s12">
+            <!-- search input here -->
+            <input type="text" name="" id="cocktail-name-input" placeholder="Cocktail name"
+                class="col s10 m6 offset-m3">
+            <button id="find-recipe-btn" class="waves-effect waves-light btn">Find A Recipe</button>
+            <!-- Here is a search for recipes -->
+        </form>
+        <!-- add a button to give you a random drink -->
+        <div id="randomizer" class="center">
+            <button id="random-drink" class="btn">
+                <span id="sup-me"><i class="material-icons">local_bar</i>Surprise Me!</span>
+            </button>
+        </div>
+        <div id="recipes" class="row cardHolder">
+            <!--  surprise me cocktail or cocktails by name search will go here -->
+        </div>
+        <div class="row col s">
+            <!-- map was here -->
+            <div id="google-map">
+
+                <div id="panel"></div>
+
+                <!-- Map appears here -->
+                <div id="map" class="hide"></div>
+            </div>
+            <!-- bar recommendation for the future development -->
+            <!-- <div id="recommended-bars" class="col s6 offset-s3">
+                <div class="row">
+                    <div class="col s12">
+                        <div class="card-panel brown lighten-4">
+                            <h5>Best Bars Ever</h5>
+                             <span class="black-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+                                necessitatibus aspernatur numquam inventore cum 
+                            </span> 
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+
+        <!-- Modal Age check -->
+        <div id="modal-age-check" class="white-text modal modal-fixed-footer">
+            <div class="modal-content center">
+                <!-- <h4>Are You 21 or Older?</h4> -->
+                <img class=" responsive-img" src="./assets/images/age-check.png" alt="Are you 21 or Older?">
+                <p>We also ask you to provide your location. To experience the full power of the <span
+                        id="dark-side">dark side</span> web application.</p>
+            </div>
+            <div class="modal-footer ">
+                <a href="https://kneebouncers.com/" id="no-btn"
+                    class="modal-close waves-effect waves-red btn red darken-2">NO</a>
+                <a href="#" id="yes-btn" class="modal-close waves-effect waves-green btn green darken-2">YES</a>
+
+            </div>
+        </div>
+
+        <!-- Modal Message -->
+        <div id="modal-no-data" class="white-text modal">
+            <div class="modal-content center">
+                <h4> <i class="material-icons">do_not_disturb_on</i> Cocktail is not in our records</h4>
+                <p>Please Enter another cocktail or get a random one.</p>
+            </div>
+            <div class="modal-footer ">
+                <a href="#search-bar" class="modal-close waves-effect waves-green btn darken-2">OK</a>
+
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col m6 s12">
+                    <p class="grey-text text-lighten-4">
+                        Made by awesome team with tons of 💌:
+                    </p>
+                    <ul>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="https://github.com/elfsvet" target="_blank">
+                                Stepan Matysik
+                            </a>
+                        </li>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="https://github.com/DeRomuald" target="_blank">
+                                Rome Romulus
+                            </a>
+                        </li>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="https://github.com/marisolxmatute10"
+                                target="_blank">
+                                Marisol Matute
+                            </a>
+                        </li>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="https://github.com/JuanTantau" target="_blank">
+                                Juan Tantau (Luis)
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- fast nav -->
+                <div class="col m4 s12">
+                    <ul>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="#map">
+                                <i class="material-icons" title="Map">map</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="#search-bar">
+                                <i class="material-icons" title="Search">search</i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container white-text">
+                © 2022 Copyright Text
+                <a class="white-text right" href="https://www.thespruceeats.com/how-to-pair-cocktails-and-food-759992"
+                    target="_blank" title="Let's Find Out">Do you want to find paring food for your
+                    cocktail?</a>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- materialize js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- !map script uncomment it to use maps -->
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLf-G0K6XFv8PvM7171bTHYQe7BHieNEw&libraries=places&callback=initMap">
+        </script>
+    <script src="./assets/js/map-script.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
